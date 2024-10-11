@@ -6,15 +6,17 @@ body, html {
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    overflow-x: hidden;  /* Prevent horizontal overflow */
 }
 
 /* Container */
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Align content to the top */
     align-items: center;
-    height: 100vh;
+    height: auto; /* Allow content to expand based on its height */
+    min-height: 100vh; /* Ensure container takes up at least the full viewport */
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8); /* Slightly translucent background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
@@ -22,6 +24,13 @@ body, html {
     padding: 20px;
     max-width: 90%;
     margin: auto;
+}
+
+/* Ensure h1 is visible and styled */
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0; /* Add spacing around h1 */
+    color: #333;
 }
 
 /* Home Page */
@@ -33,37 +42,37 @@ body, html {
     color: white;
     border-radius: 30px;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Add smooth transitions */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 #startButton:hover {
     background-color: #e68a00;
-    transform: scale(1.05); /* Slightly increase size on hover */
+    transform: scale(1.05); 
 }
 
 /* Egg Cracking Page */
 #eggImage {
     width: 150px;
     cursor: pointer;
-    transition: transform 0.3s ease; /* Smooth transform */
+    transition: transform 0.3s ease;
 }
 
 #eggImage:hover {
-    transform: scale(1.1); /* Increase size on hover */
+    transform: scale(1.1);
 }
 
 h2 {
     margin-bottom: 20px;
-    color: #333333; /* Darker text color */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Text shadow effect */
+    color: #333333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Egg Nutrition Page */
 p {
     margin: 5px;
     font-size: 18px;
-    color: #555555; /* Soft gray color */
-    line-height: 1.6; /* Improve readability */
+    color: #555555;
+    line-height: 1.6;
     text-align: left;
     width: 80%;
     background-color: #fff;
@@ -74,7 +83,7 @@ p {
 }
 
 p:hover {
-    transform: scale(1.02); /* Slightly enlarge paragraph on hover */
+    transform: scale(1.02);
     background: #f0f8ff;
 }
 
@@ -100,15 +109,15 @@ p:hover {
 
 /* Footer Styles */
 footer {
-    position: fixed;  /* Sticks footer to the bottom */
+    position: fixed;
     bottom: 0;
     width: 100%;
-    text-align: center;  /* Horizontally center the text */
-    padding: 15px 0;  /* Vertical padding for more spacing */
+    text-align: center;
+    padding: 15px 0;
     font-size: 16px;
-    display: flex;  /* Use flexbox to align items */
-    justify-content: center;  /* Center content horizontally */
-    align-items: center;  /* Center content vertically */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);  /* Light shadow on top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
     font-weight: bold;
 }
